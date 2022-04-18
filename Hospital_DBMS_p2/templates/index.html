@@ -1,0 +1,21 @@
+<html>
+<title>Search Page</title>
+<body>
+<p>You are in home page</p>
+<ul>
+    <li><a href="{{url_for('search')}}">Search</a></li>
+    <li><a href="{{url_for('login')}}">Login</a></li>
+    <li><a href="{{url_for('register')}}">Register</a></li>
+    <li><a href="{{url_for('update')}}">Update</a></li>
+    <li><a href="{{url_for('doctorreg')}}">Doctor's Registration</a></li>
+    <li><a href="{{url_for('doctorlogin')}}">Doctor's Login</a></li>
+    <h3>{{nhosps}} : Total number of hospitals</h3>
+    <h3>{{ndocs}} : Total number of Doctors</h3>
+    {% for type,beds in total_types %}
+    <tr>
+        <h4>{{type}} : {{beds}}</h4>
+    </tr>
+{% endfor %}
+</ul>
+</body>
+</html>
